@@ -12,11 +12,16 @@ public class EverythingController {
 
     @GetMapping("/forward")
     public String forward() {
-        return "forward:/index.html";
+        return "forward:/anything";
     }
 
     @GetMapping("/redirect")
     public String redirect() {
         return "redirect:/index.html";
+    }
+
+    @GetMapping("/anything")
+    public String newPage() {
+        return "new-page.html";
     }
 }
