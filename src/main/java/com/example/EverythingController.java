@@ -2,8 +2,6 @@ package com.example;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.servlet.View;
-import org.springframework.web.servlet.view.RedirectView;
 
 /**
  * @author Marcos Barbero
@@ -18,7 +16,7 @@ public class EverythingController {
     }
 
     @GetMapping("/redirect")
-    public View redirect() {
-        return new RedirectView("index.html");
+    public String redirect() {
+        return "redirect:/index.html";
     }
 }
